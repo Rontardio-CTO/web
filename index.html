@@ -6,44 +6,75 @@
     <title>$rontardio - Coming Soon</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
         body {
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background-color: black;
             color: white;
             text-align: center;
             flex-direction: column;
             font-family: 'Press Start 2P', cursive;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-x: hidden;
         }
-
+        .title-container {
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
         h1 {
-            font-size: 7rem;
+            font-size: 5rem;
             background-image: linear-gradient(270deg, #F8E1E7, #F4D4D2, #F8C7B9, #E6A398, #D88C8C, #B76868, #8B5E83, #5C4E93, #3B5998, #2E86AB, #2CB1C0, #3CD3AD);
             background-size: 800% 800%;
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: colorShift 10s infinite linear;
             margin-bottom: 20px;
+            width: 100%;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            display: inline-block;
         }
-
         @keyframes colorShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
         p {
             font-size: 1.5rem;
             margin-top: 5px;
         }
+        
+        /* Media queries for better responsiveness */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+                padding: 0 5px;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>$rontardio</h1>
+    <div class="title-container">
+        <h1>$rontardio</h1>
+    </div>
     <p>is cooking</p>
 </body>
 </html>
