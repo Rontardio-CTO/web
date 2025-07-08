@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>$rontardio - Coming Soon</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -49,8 +49,19 @@
             font-size: 1.5rem;
             margin-top: 5px;
         }
-        
-        /* Media queries for better responsiveness */
+
+        /* iframe styles */
+        iframe {
+            margin-top: 30px;
+            border: none;
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #3cd3ad;
+        }
+
+        /* Responsive text sizes */
         @media screen and (max-width: 768px) {
             h1 {
                 font-size: 3.5rem;
@@ -58,8 +69,11 @@
             p {
                 font-size: 1rem;
             }
+            iframe {
+                height: 300px;
+            }
         }
-        
+
         @media screen and (max-width: 480px) {
             h1 {
                 font-size: 2.5rem;
@@ -68,6 +82,9 @@
             p {
                 font-size: 0.8rem;
             }
+            iframe {
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -75,6 +92,7 @@
     <div class="title-container">
         <h1>$rontardio</h1>
     </div>
-    <p>is cooking</p>
+    <!-- hack.chat iframe embed -->
+    <iframe src="https://hack.chat/?RONTARDIO" title="hack.chat room"></iframe>
 </body>
 </html>
